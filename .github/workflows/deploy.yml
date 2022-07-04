@@ -1,0 +1,24 @@
+name: deploy7
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: name of the runner venkat
+        required: true
+        default: "venkat"
+      name2:
+        description: optional
+        required: false
+        default: "na"
+
+jobs:
+  testing5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print test7
+        run: echo "test7"
+      - name: shell commands
+        run: |
+          node -v
+          npm -v
